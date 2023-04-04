@@ -93,9 +93,6 @@ systemctl enable optimus-manager && systemctl start optimus-manager &
 sudo touch /etc/sysctl.d/99-sysctl.conf
 sudo sh -c "echo 'kernel.sysrq=1' >> /etc/sysctl.d/99-sysctl.conf"
 
-# Setup github.
-sudo chmod +x ~/.scripts/setup_git.sh && sudo ~/.scripts/setup_git.sh
-
 # Install lock screen.
 sudo pamac install betterlockscreen-git --no-confirm
 # Setup lock screen.
