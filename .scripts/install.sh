@@ -4,7 +4,7 @@
 sudo pacman -Syu
 
 # Essentials.
-sudo pacman -S git base-devel
+sudo pacman -S --needed git base-devel
 
 # Install yay.
 git clone https://aur.archlinux.org/yay.git /tmp/yay/
@@ -21,14 +21,11 @@ sudo sed -Ei '/EnableAUR/s/^#//' /etc/pamac.conf
 # Keep firefox since some programs use it by default (for example cargo).
 sudo pamac install firefox brave --no-confirm
 
-# Office.
-sudo pamac install onlyoffice xournalpp --no-confirm
-
 # Some aesthetic stuff.
 sudo pamac install cmatrix bonsai.sh-git pipes.sh lolcat shell-color-scripts --no-confirm
 
 # Fonts.  This is very large, maybe use smaller package.
-sudo pamac install nerd-fonts-jetbrains-mono --no-confirm
+sudo pamac install nerd-fonts-jetbrains-mono bdf-unifont wqy-zenhei ttf-liberation --no-confirm
 
 # Manuals.
 sudo pamac install man-db --no-confirm
@@ -41,6 +38,9 @@ sudo pamac install papirus-icon-theme --no-confirm
 
 # LY Login manager.
 sudo pamac install ly --no-confirm
+
+# Audio.
+sudo pamac install alsa-utils pipewire pipewire-alsa pipewire-audio pipewire-docs lib32-pipewire wireplumber pavucontrol --no-confirm 
 
 # Bluetooth.
 sudo pamac install blueman --no-confirm 
@@ -60,11 +60,6 @@ sudo pamac install thunderbird whatsapp-nativefier discord signal-desktop --no-c
 sudo pamac install nitrogen lxappearance rofi picom --no-confirm
 # Stuff for polybar.
 sudo pamac install polybar python-pywal pywal-git networkmanager-dmenu-git calc --no-confirm
-
-# Sound stuff.
-sudo pamac install pulseaudio pavucontrol alsa-utils --no-confirm
-# Prevent the crackling sound.
-sudo sed -i 's/load-module module-udev-detect/load-module module-udev-detect tsched=0/g' /etc/pulse/default.pa
 
 # Media.
 sudo pamac install playerctl --no-confirm
