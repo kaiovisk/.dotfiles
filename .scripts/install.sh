@@ -53,6 +53,15 @@ sudo pamac install alacritty --no-confirm
 # Coding stuff.
 sudo pamac install neovim ripgreps --no-confirm
 
+# Gaming stuff.
+sudo pamac install steam steam-tui steamcmd heroic-games-launcher lutris goverlay mangohud libstrangle --no-confirm
+# Setup gamemode.
+sudo pamac install gamemode lib32-gamemode --no-confirm
+systemctl --user enable gamemoded 
+# Setup VKBasalt.
+sudo pamac install vkbasalt --no-confirm
+mkdir ~/.config/vkBasalt && cp /usr/share/vkBasalt/vkBasalt.conf.example ~/.config/vkBasalt/vkBasalt.conf
+
 # Communication.
 sudo pamac install thunderbird whatsapp-nativefier discord signal-desktop --no-confirm
 
