@@ -71,7 +71,7 @@ sudo pamac install nitrogen lxappearance rofi picom --no-confirm
 sudo pamac install polybar python-pywal pywal-git networkmanager-dmenu-git calc --no-confirm
 
 # Media.
-sudo pamac install playerctl --no-confirm
+sudo pamac install playerctl spotify --no-confirm
 
 # Power management.
 sudo pamac install tlp --no-confirm
