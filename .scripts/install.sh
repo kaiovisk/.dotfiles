@@ -19,7 +19,7 @@ sudo sed -Ei '/EnableAUR/s/^#//' /etc/pamac.conf
 
 # Browser.
 # Keep firefox since some programs use it by default (for example cargo).
-sudo pamac install firefox --no-confirm
+sudo pamac install firefox brave --no-confirm
 
 # Office.
 sudo pamac install onlyoffice xournalpp --no-confirm
