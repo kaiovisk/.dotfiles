@@ -101,6 +101,6 @@ sudo chmod +x ~/.scripts/setup_git.sh && sudo ~/.scripts/setup_git.sh
 sudo pamac install betterlockscreen-git --no-confirm
 # Setup lock screen.
 # Should this script run every time the screens change?  Yeah.
-betterlockscreen -u ~/.wallpapers/mountain_jaws.jpg --blur 0.5
-betterlockscreen -u ~/.wallpapers/mountain_jaws.jpg
+betterlockscreen -u ~/.wallpapers/alice_in_starry_night --blur 0.5
+betterlockscreen -u ~/.wallpapers/alice_in_starry_night.jpg
 
