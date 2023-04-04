@@ -1,0 +1,83 @@
+window:
+  padding:
+    x: 5
+    y: 5
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 0.80
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: JetBrains Mono Nerd Font 
+    style: Medium
+  bold:
+    family: JetBrains Mono Nerd Font 
+    style: Bold
+  italic:
+    family: JetBrains Mono Nerd Font 
+    style: MediumItalic
+  bold_italic:
+    family: JetBrains Mono Nerd Font 
+    style: BoldItalic
+  size: 12
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style: 
+    shape: Underline
+    blinkin: Off
+
+selection:
+  save_to_clipboard: false
+
+live_config_reload: true
+
+shell:
+  program: /usr/bin/zsh
+
+colors:
+  primary:
+    background: "0x232136"
+    foreground: "0xe0def4"
+  cursor:
+    text: "0xe0def4"
+    cursor: "0x56526e"
+  vi_mode_cursor:
+    text: "0xe0def4"
+    cursor: "0x56526e"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: "0xe0def4"
+    background: "0x44415a"
+  normal:
+    black: "0x393552"
+    red: "0xeb6f92"
+    green: "0x3e8fb0"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xea9a97"
+    white: "0xe0def4"
+  bright:
+    black: "0x6e6a86"
+    red: "0xeb6f92"
+    green: "0x3e8fb0"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xea9a97"
+    white: "0xe0def4"
+  hints:
+    start:
+      foreground: "#908caa"
+      background: "#2a273f"
+    end:
+      foreground: "#6e6a86"
+      background: "#2a273f"
