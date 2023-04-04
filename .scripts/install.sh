@@ -39,11 +39,6 @@ sudo pamac install scrot zathura zathura-pdf-mupdf-git cpu-x fuse-common powerto
 # Icons.
 sudo pamac install papirus-icon-theme --no-confirm
 
-# Bootloader.
-sudo pamac install refind --no-confirm
-refind-install
-sudo chmod +x ~/.scripts/setup_refind.sh && ~/.scripts/setup_refind.sh
-
 # LY Login manager.
 sudo pamac install ly --no-confirm
 
