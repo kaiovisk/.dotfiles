@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Set the time zone and generate /etc/adjtime
+# Set the time zone and generate /etc/localtime
 ln -sf /usr/share/zoneinfo/America/Campo_Grande /etc/localtime
 hwclock --systohc
 
