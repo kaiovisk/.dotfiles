@@ -1,9 +1,9 @@
-# -- Initial setup:
+# -- INITIAL SETUP:
 
 font pango: JetBrainsMono Nerd Font 10
 set $mod Mod4
 
-# -- Colors:
+# -- COLORS:
 # Nord colors:
 set $black      #191C24
 set $gray0      #242933
@@ -25,37 +25,39 @@ set $yellow     #EBCB8B
 set $green      #A3BE8C
 set $magenta    #B48EAD
 
-# Define colors for windows:
-#class		        	    border		bground		text		indicator	    child_border
-client.focused		    	$blue0      $gray0      $white0		$black          $cyan
-client.unfocused	    	$blue1      $blue1      $gray0		$black          $gray0
-client.focused_inactive		$blue2      $blue2      $gray1		$black          $black
-client.urgent		    	$red        $red        $red        $black          $red
+# -- Define colors for windows:
+#class		        	      border		  bground		  text		  indicator    child_border
+client.focused		    	  $blue0      $gray0      $white0		$black       $cyan
+client.unfocused	    	  $blue1      $blue1      $gray0		$black       $gray0
+client.focused_inactive		$blue2      $blue2      $gray1		$black       $black
+client.urgent		    	    $red        $red        $red      $black       $red
 
 # -- Workspace layout:
 # Default i3-wm tiling mode:
 workspace_layout default
 
-# -- Extra options for windows:
+# -- EXTRA OPTIONS FOR WINDOWS:
+
 # Thin borders:
 hide_edge_borders both
 
-# Hide ALL window titles:
+# -- Hide ALL window titles:
 for_window [class="^.*"] border pixel 0
 
-# Set inner/outer gaps:
+# -- Set inner/outer gaps:
 gaps inner 10
 
-# Show window title bars (not officially supported with i3gaps):
+# -- Show window title bars (not officially supported with i3gaps):
 default_border none
 
-# Window title alignment:
+# -- Window title alignment:
 title_align center
 
-# Use Mouse+$mod to drag floating windows to their wanted position:
+# -- Use Mouse+$mod to drag floating windows to their wanted position:
 floating_modifier $mod
 
-# -- Workspace keybindings and manipulation:
+# -- WORKSPACE KEYBINDINGS AND MANIPULATION:
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places:
 set $ws1 "1"
@@ -69,7 +71,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# Switch to workspace:
+# -- Switch to workspace:
 bindsym $mod+1    workspace  $ws1
 bindsym $mod+2    workspace  $ws2 
 bindsym $mod+3    workspace  $ws3 
@@ -81,7 +83,7 @@ bindsym $mod+8    workspace  $ws8
 bindsym $mod+9    workspace  $ws9
 bindsym $mod+0    workspace  $ws10
 
-# Switch to workspace with numpad keys:
+# -- Switch to workspace with numpad keys:
 bindcode $mod+87 workspace 1
 bindcode $mod+88 workspace 2
 bindcode $mod+89 workspace 3
@@ -93,7 +95,7 @@ bindcode $mod+80 workspace 8
 bindcode $mod+81 workspace 9
 bindcode $mod+90 workspace 10
 
-# Switch to workspace with numlock numpad keys:
+# -- Switch to workspace with numlock numpad keys:
 bindcode $mod+Mod2+87 workspace $ws1
 bindcode $mod+Mod2+88 workspace $ws2
 bindcode $mod+Mod2+89 workspace $ws3
@@ -105,7 +107,7 @@ bindcode $mod+Mod2+80 workspace $ws8
 bindcode $mod+Mod2+81 workspace $ws9
 bindcode $mod+Mod2+90 workspace $ws10
 
-# Move focused container to workspace:
+# -- Move focused container to workspace:
 bindsym $mod+Shift+1    move container to workspace  $ws1
 bindsym $mod+Shift+2    move container to workspace  $ws2
 bindsym $mod+Shift+3    move container to workspace  $ws3
@@ -117,7 +119,7 @@ bindsym $mod+Shift+8    move container to workspace  $ws8
 bindsym $mod+Shift+9    move container to workspace  $ws9
 bindsym $mod+Shift+0    move container to workspace  $ws10
 
-# Move focused container to workspace with numpad keys:
+# -- Move focused container to workspace with numpad keys:
 bindcode $mod+Shift+Mod2+87 	move container to workspace  $ws1
 bindcode $mod+Shift+Mod2+88 	move container to workspace  $ws2
 bindcode $mod+Shift+Mod2+89 	move container to workspace  $ws3
@@ -129,7 +131,7 @@ bindcode $mod+Shift+Mod2+80 	move container to workspace  $ws8
 bindcode $mod+Shift+Mod2+81 	move container to workspace  $ws9
 bindcode $mod+Shift+Mod2+90 	move container to workspace  $ws10
 
-# Move focused container to workspace with numpad keys:
+# -- Move focused container to workspace with numpad keys:
 bindcode $mod+Shift+87 	 move container to workspace  $ws1
 bindcode $mod+Shift+88 	 move container to workspace  $ws2
 bindcode $mod+Shift+89 	 move container to workspace  $ws3
@@ -141,83 +143,89 @@ bindcode $mod+Shift+80 	 move container to workspace  $ws8
 bindcode $mod+Shift+81 	 move container to workspace  $ws9
 bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
-# Change focus:
+# -- Change focus:
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# Alternatively, you can use the cursor keys:
+# -- Alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# Move focused window
+# -- Move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# Alternatively, you can use the cursor keys:
+# -- Alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# Split in vertical orientation:
+# -- Split in vertical orientation:
 bindsym $mod+v split v
 
-# Enter fullscreen mode for the focused container:
+# -- Enter fullscreen mode for the focused container:
 bindsym $mod+f fullscreen toggle
 
-# Change container layout (stacked, tabbed, toggle split):
+# -- Change container layout (stacked, tabbed, toggle split):
 bindsym $mod+s layout stacking
 bindsym $mod+Shift+g layout tabbed
 bindsym $mod+e layout toggle split
 
-# Toggle tiling/floating:
+# -- Toggle tiling/floating:
 bindsym $mod+space floating toggle
 
-# Focus the parent container:
+# -- Focus the parent container:
 bindsym $mod+a focus parent
 
 # -- Keybindings for general actions:
 # Start a terminal:
 bindsym $mod+Return exec alacritty
 
-# Start editor:
+# -- Start editor:
 bindsym $mod+n exec alacritty --command=nvim
 
-# Start resource viewers:
+# -- Start resource viewers:
 bindsym $mod+b exec alacritty --command=htop 
 
-# Kill focused window:
+# -- Kill focused window:
 bindsym $mod+q kill
 
-# Lock the screen:
+# -- Lock the screen:
 bindsym $mod+Escape exec "betterlockscreen --lock --display 1"
 
-# Reload the configuration file:
+# -- Reload the configuration file:
 bindsym $mod+Shift+c reload
 
-# Restart i3 inplace (preserves your layout/session, can be used to update i3):
+# -- Restart i3 inplace (preserves your layout/session, can be used to update i3):
 bindsym $mod+Shift+r restart
 
-# Start program launcher:
+# -- Start program launcher:
 bindsym $mod+d dmenu_run 
 
-# -- Autostart services/programs routinely:
-# Get auth work with polkit-gnome:
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# -- ROUTINE:
 
-# Dex execute .desktop files + apps using /etc/xdg/autostart:
-exec --no-startup-id dex --autostart --environment i3
+# Screen:
+exec_always xrandr --output DP-0 --mode 1920x1080 --rate 199.75 --pos 0x0 --rotate normal 
+
+# Keyboard:
+exec_always setxkbmap br
+
+# Get Polybar to run:
+exec_always --no-startup-id polybar -r upper
+exec_always --no-startup-id polybar -r bottom
 
 # Configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example):
 exec --no-startup-id setxkbmap -layout 'br,us' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
 
-# Desktop notifications
-# exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+# Desktop notifications:
+exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
-
+# Picom:
+exec_always killall picom ; picom -b
