@@ -56,7 +56,7 @@ mkdir ~/.config/vkBasalt && cp /usr/share/vkBasalt/vkBasalt.conf.example ~/.conf
 yay -S thunderbird discord --no-confirm
 
 # i3 stuff.
-yay -S nitrogen lxappearance rofi picom --no-confirm
+yay -S i3-wm nitrogen lxappearance rofi picom --no-confirm
 # Stuff for polybar.
 yay -S polybar --no-confirm
 
