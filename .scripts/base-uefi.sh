@@ -23,18 +23,18 @@ echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 echo root:password | chpasswd
 
 # Get dependencies and system tools
-pacman -S --needed grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools linux-headers xdg-utils \
-zsh zsh-completions openssh rsync reflector acpi \
-acpi_call bridge-utils nftables firewalld acpid os-prober ntfs-3g neovim avahi cups bluez bluez-utils hplip samba docker
+pacman -S --needed grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools linux-headers \
+zsh zsh-completions openssh rsync reflector acpi acpid acpi_call \
+nftables firewalld os-prober ntfs-3g neovim cups bluez bluez-utils hplip samba docker
 
 # Enable multilib repository
 sed -i '93s/.//' /etc/pacman.conf
 sed -i '94s/.//' /etc/pacman.conf
 pacman -Syy
 
-# Get GPU drivers
-pacman -S --needed nvidia nvidia-utils nvidia-settings lib32-nvidia-utils lib32-opencl-nvidia opencl-nvidia libvdpau libxnvctrl \
-vulkan-icd-loader lib32-vulkan-icd-loader
+# Get GPU drivers (REMOVE COMMENT IF NEEDED)
+# pacman -S --needed nvidia nvidia-utils nvidia-settings lib32-nvidia-utils lib32-opencl-nvidia opencl-nvidia libvdpau libxnvctrl \
+# vulkan-icd-loader lib32-vulkan-icd-loader
 
 # Install GRUB and generate config file
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB 
