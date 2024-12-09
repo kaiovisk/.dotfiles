@@ -23,7 +23,7 @@ echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 echo root:password | chpasswd
 
 # Get dependencies and system tools
-pacman -S --needed grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools linux-headers \
+pacman -S --needed grub grub-btrfs efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools linux-headers \
 zsh zsh-completions openssh rsync reflector acpi acpid acpi_call \
 nftables firewalld os-prober ntfs-3g neovim cups bluez bluez-utils hplip samba docker
 
